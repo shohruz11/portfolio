@@ -34,8 +34,8 @@
     z-index: 1;
     display: block;
     line-height: 1;
-    color: var(--white);
     padding: 6px 18px;
+    color: var(--white);
     background: linear-gradient(75deg, var(--white), var(--yellow));
 }
 
@@ -64,12 +64,12 @@
 
 .header__content {
     background: url(../images/header__img.jpg);
-    flex-grow: 1;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    flex-grow: 1;
     display: flex;
     align-items: center;
-
 }
 
 .header__title {
@@ -77,10 +77,107 @@
     font-size: 60px;
     text-transform: uppercase;
     margin-bottom: 55px;
+
 }
-.header__desc{
-    font-style: 22px;
+
+.header__desc {
+    font-size: 22px;
     color: var(--white);
     text-align: justify;
     line-height: 27px;
+}
+
+/* ********* Header end *********** */
+.history {
+    background: var(--dark);
+    padding: 60px 0;
+}
+
+.history__title {
+    font-size: 28px;
+    color: var(--yellow);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.history__title::before,
+.history__title::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 50px;
+    background: var(--white);
+}
+
+.history__title::before {
+    margin-left: auto;
+}
+
+.history__desc {
+    color: var(--white);
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* ********** history end */
+.study {
+    background: var(--dark_light);
+    padding: 15px 0;
+}
+
+.study__slider-prev,
+.study__slider-next {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: var(--yellow);
+}
+
+.study__slider-prev,
+.study__slider-next {
+    color: var(--yellow);
+}
+
+.study__slider-prev {
+    left: 0;
+}
+
+.study__slider-next {
+    right: 0;
+}
+
+.study__slider-prev i::after,
+.study__slider-next i::after {
+    color: #a5a6a6;
+}
+
+.study__title {
+    color: var(--white);
+    font-size: 24px;
+    text-transform: uppercase;
+    font-style: (--m);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.study__title_color-yellow {
+    color: var(--yellow);
+}
+
+.study__desc {
+    color: var(--white);
+    font-size: 18px;
+    text-align: justify;
+}
+
+.study__image {
+    border-radius: 6px;
+    max-height: 370px;
+    object-fit: cover;
+    width: 100%;
+
 }
